@@ -27,9 +27,11 @@ class _InputPasswordState extends State<InputPassword> {
         obscureText: _hidePassword,
         //validator:(value) => EmailValidator.validate(value) ? null : "Please enter a valid email",
         decoration: InputDecoration(
+          hoverColor: kactive,
             labelStyle: TextStyle(
                 fontSize: 18, fontWeight: FontWeight.w500, color: kgrey),
             focusColor: Colors.grey,
+
             labelText: 'Password',
             enabledBorder:
                 UnderlineInputBorder(borderSide: BorderSide(color: kgrey)),
@@ -44,9 +46,10 @@ class _InputPasswordState extends State<InputPassword> {
                 });
               },
               child: _hidePassword
-                  ? Icon(Icons.remove_red_eye_rounded)
-                  : Icon(Icons.visibility_off),
+                  ? Icon(Icons.remove_red_eye_rounded,color: kactive,)
+                  : Icon(Icons.visibility_off,color: kactive,),
             )),
+
       ),
     );
   }

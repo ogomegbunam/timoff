@@ -8,3 +8,9 @@ String? validateEmail(String? value) {
   else
     return null;
 }
+String? validatePassword(String? value) {
+  if (value!.length < 6)
+    return 'Password must be more than 8 characters';
+  else
+    return null;
+}

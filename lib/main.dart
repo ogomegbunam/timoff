@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:timoff/code_verification.dart';
+import 'package:timoff/const.dart';
 import 'package:timoff/log_in.dart';
+import 'package:timoff/reset_password.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,9 +26,12 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primaryColor: kactive,
+        focusColor: kactive,
+
+
       ),
-      home: const Login(),
+      home: const CodeVerification(),
     );
   }
 }

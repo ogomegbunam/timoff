@@ -8,12 +8,19 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'const.dart';
 
-class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+class CodeVerification extends StatelessWidget {
+  const CodeVerification({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        leading: Icon(Icons.keyboard_arrow_left,color: Colors.black87,),
+        backgroundColor: kwhite,
+        //: Text('Reset Password',style: TextStyle(color: Colors.black87),),
+        elevation: 0,
+      ),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
@@ -23,20 +30,20 @@ class Login extends StatelessWidget {
 
               children: [
 
-              SizedBox(height: 50,),
-             Container(
-               height: 50,
-               width: MediaQuery.of(context).size.width,
-               decoration: BoxDecoration(
+                SizedBox(height: 50,),
+                Container(
+                  height: 50,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
 
-               ),
-               child: Image(
-             image: AssetImage('assets/timeoff.png'),
-               ),
+                  ),
+                  child: Image(
+                    image: AssetImage('assets/timeoff.png'),
+                  ),
 
-             ),
-               SizedBox(height: 20,),
-               // Image.asset('assets/timeoff.png'),
+                ),
+                SizedBox(height: 20,),
+                // Image.asset('assets/timeoff.png'),
                 Card(
                   elevation: 5,
                   shape: RoundedRectangleBorder(
@@ -54,41 +61,22 @@ class Login extends StatelessWidget {
                           height: 20,
                         ),
                         Text(
-                          'Sign in your account',
+                          'We have sent an OTP code to either your \n   email ,input the code to recover your \n                       password.',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
                               color: Colors.black87),
                         ),
-                        FormInputField("Email", emailController, validateEmail),
-                        InputPassword(),
+                        FormInputField("OTP", emailController, validateEmail),
+
                         SizedBox(
                           height: 30,
                         ),
                         ButtonComponent(
-                          label: 'LOGIN',
+                          label: 'RESET',
                           onTap: () {},
                         ),
-                        Center(
-                          child: Text(
-                            'Forgot Password?',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                color: Colors.black87,
-                                fontSize: 15),
-                          ),
-                        ),
-                        GestureDetector(
-                          child: Center(
-                            child: Text(
-                              'RESET',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  color: kactive,
-                                  fontSize: 15),
-                            ),
-                          ),
-                        )
+
                       ],
                     ),
                   ),
