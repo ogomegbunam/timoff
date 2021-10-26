@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:timoff/apply_for_leave.dart';
 import 'package:timoff/code_verification.dart';
 import 'package:timoff/const.dart';
+import 'package:timoff/dashboard.dart';
+import 'package:timoff/leave_history.dart';
+import 'package:timoff/leave_status.dart';
 import 'package:timoff/log_in.dart';
 import 'package:timoff/reset_password.dart';
+import 'package:timoff/set_new_password.dart';
+import 'package:timoff/staffs_on_leave.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +37,17 @@ class MyApp extends StatelessWidget {
 
 
       ),
-      home: const CodeVerification(),
+      home: const HomeScreen(),
+      routes: {
+        '/leave_status': (ctx) => LeaveStatus(),
+        '/leave_history': (ctx) => LeaveHistory(),
+        '/staffs_on_leave': (ctx) => StaffsOnLeave(),
+        '/leave_application': (ctx) => LeaveApplication(),
+        '/log_in': (ctx) => Login(),
+        '/reset_password': (ctx) => ResetPassword(),
+        '/code_verification': (ctx) => CodeVerification(),
+        '/home': (ctx) => HomeScreen(),
+      },
     );
   }
 }

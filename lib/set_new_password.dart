@@ -1,15 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:timoff/button.dart';
-import 'package:timoff/input_field.dart';
 import 'package:timoff/utils.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
-
+import 'button.dart';
 import 'const.dart';
+import 'input_field.dart';
 
-class ResetPassword extends StatelessWidget {
-  const ResetPassword({Key? key}) : super(key: key);
+class SetNewPassword extends StatelessWidget {
+  const SetNewPassword({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +15,7 @@ class ResetPassword extends StatelessWidget {
         centerTitle: true,
         leading: const Icon(Icons.keyboard_arrow_left,color: Colors.black87,),
         backgroundColor: kwhite,
-        title: const Text('Reset Password',style: TextStyle(color: Colors.black87),),
+        //: Text('Reset Password',style: TextStyle(color: Colors.black87),),
         elevation: 0,
       ),
       body: SingleChildScrollView(
@@ -30,11 +27,11 @@ class ResetPassword extends StatelessWidget {
 
               children: [
 
-                SizedBox(height: 50,),
+                const SizedBox(height: 50,),
                 Container(
                   height: 50,
                   width: MediaQuery.of(context).size.width,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
 
                   ),
                   child: const Image(
@@ -61,41 +58,23 @@ class ResetPassword extends StatelessWidget {
                           height: 20,
                         ),
                         const Text(
-                          'Enter your registered email below to receive \npassword reset code',
+                          'Set your new password below to continue\n       accessing your Time-off account.',
                           style: TextStyle(
                               fontWeight: FontWeight.w500,
                               fontSize: 16,
                               color: Colors.black87),
                         ),
-                        FormInputField("Email", emailController, validateEmail),
+                        FormInputField("New Password", emailController, validateEmail),
+                        FormInputField("Confirm New Password", emailController, validateEmail),
 
                         const SizedBox(
                           height: 30,
                         ),
                         ButtonComponent(
-                          label: 'SEND CODE',
+                          label: 'SAVE & CONTINUE',
                           onTap: () {},
                         ),
-                        const Center(
-                          child: Text(
-                            'Remember Password?',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                color: Colors.black87,
-                                fontSize: 15),
-                          ),
-                        ),
-                        GestureDetector(
-                          child: const Center(
-                            child: Text(
-                              'LOGIN',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  color: kactive,
-                                  fontSize: 15),
-                            ),
-                          ),
-                        )
+
                       ],
                     ),
                   ),

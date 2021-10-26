@@ -19,7 +19,7 @@ class ButtonComponent extends StatelessWidget {
       child: Container(
         height: 48,
         width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: kactive,
           borderRadius: BorderRadius.all(Radius.circular(20)),
         ),
@@ -33,7 +33,7 @@ class ButtonComponent extends StatelessWidget {
           onPressed: onTap,
           child: Text(
             label,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600),
           ),
         ),

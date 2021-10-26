@@ -20,7 +20,7 @@ class _InputPasswordState extends State<InputPassword> {
   Widget build(BuildContext context) {
     return Padding(
       //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
-      padding: EdgeInsets.symmetric(horizontal: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 15),
       child: TextFormField(
         cursorColor: kgrey,
         keyboardType: TextInputType.emailAddress,
@@ -28,16 +28,16 @@ class _InputPasswordState extends State<InputPassword> {
         //validator:(value) => EmailValidator.validate(value) ? null : "Please enter a valid email",
         decoration: InputDecoration(
           hoverColor: kactive,
-            labelStyle: TextStyle(
+            labelStyle: const TextStyle(
                 fontSize: 18, fontWeight: FontWeight.w500, color: kgrey),
             focusColor: Colors.grey,
 
             labelText: 'Password',
             enabledBorder:
-                UnderlineInputBorder(borderSide: BorderSide(color: kgrey)),
-            border: UnderlineInputBorder(borderSide: BorderSide(color: kgrey)),
+                const UnderlineInputBorder(borderSide: BorderSide(color: kgrey)),
+            border: const UnderlineInputBorder(borderSide: BorderSide(color: kgrey)),
             focusedBorder:
-                UnderlineInputBorder(borderSide: BorderSide(color: kgrey)),
+                const UnderlineInputBorder(borderSide: BorderSide(color: kgrey)),
             suffixIcon: GestureDetector(
               onTap: () {
                 setState(() {
@@ -46,8 +46,8 @@ class _InputPasswordState extends State<InputPassword> {
                 });
               },
               child: _hidePassword
-                  ? Icon(Icons.remove_red_eye_rounded,color: kactive,)
-                  : Icon(Icons.visibility_off,color: kactive,),
+                  ? const Icon(Icons.remove_red_eye_rounded,color: kactive,)
+                  : const Icon(Icons.visibility_off,color: kactive,),
             )),
 
       ),
@@ -95,14 +95,14 @@ class FormInputField extends StatelessWidget {
         autovalidateMode: AutovalidateMode.onUserInteraction,
         decoration: InputDecoration(
           labelStyle:
-              TextStyle(fontSize: 18, fontWeight: FontWeight.w500, color: kgrey),
+              const TextStyle(fontSize: 18, fontWeight: FontWeight.w500, color: kgrey),
           focusColor: Colors.grey,
           labelText: label,
           enabledBorder:
-              UnderlineInputBorder(borderSide: BorderSide(color: kgrey)),
-          border: UnderlineInputBorder(borderSide: BorderSide(color: kgrey)),
+              const UnderlineInputBorder(borderSide: BorderSide(color: kgrey)),
+          border: const UnderlineInputBorder(borderSide: BorderSide(color: kgrey)),
           focusedBorder:
-              UnderlineInputBorder(borderSide: BorderSide(color: kgrey)),
+              const UnderlineInputBorder(borderSide: BorderSide(color: kgrey)),
         ),
         validator: validate,
       ),

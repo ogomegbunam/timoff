@@ -23,23 +23,23 @@ class Login extends StatelessWidget {
 
               children: [
 
-              SizedBox(height: 50,),
+              const SizedBox(height: 50,),
              Container(
                height: 50,
                width: MediaQuery.of(context).size.width,
-               decoration: BoxDecoration(
+               decoration: const BoxDecoration(
 
                ),
-               child: Image(
+               child: const Image(
              image: AssetImage('assets/timeoff.png'),
                ),
 
              ),
-               SizedBox(height: 20,),
+               const SizedBox(height: 20,),
                // Image.asset('assets/timeoff.png'),
                 Card(
                   elevation: 5,
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(15))),
                   shadowColor: kwhite,
                   color: kwhite,
@@ -50,10 +50,10 @@ class Login extends StatelessWidget {
                     // decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(50))),
                     child: Column(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
-                        Text(
+                        const Text(
                           'Sign in your account',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -61,15 +61,15 @@ class Login extends StatelessWidget {
                               color: Colors.black87),
                         ),
                         FormInputField("Email", emailController, validateEmail),
-                        InputPassword(),
-                        SizedBox(
+                        const InputPassword(),
+                        const SizedBox(
                           height: 30,
                         ),
                         ButtonComponent(
                           label: 'LOGIN',
                           onTap: () {},
                         ),
-                        Center(
+                        const Center(
                           child: Text(
                             'Forgot Password?',
                             style: TextStyle(
@@ -79,7 +79,7 @@ class Login extends StatelessWidget {
                           ),
                         ),
                         GestureDetector(
-                          child: Center(
+                          child:  const Center(
                             child: Text(
                               'RESET',
                               style: TextStyle(

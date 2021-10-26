@@ -16,7 +16,7 @@ class CodeVerification extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        leading: Icon(Icons.keyboard_arrow_left,color: Colors.black87,),
+        leading: const Icon(Icons.keyboard_arrow_left,color: Colors.black87,),
         backgroundColor: kwhite,
         //: Text('Reset Password',style: TextStyle(color: Colors.black87),),
         elevation: 0,
@@ -30,23 +30,23 @@ class CodeVerification extends StatelessWidget {
 
               children: [
 
-                SizedBox(height: 50,),
+                const SizedBox(height: 50,),
                 Container(
                   height: 50,
                   width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
 
                   ),
-                  child: Image(
+                  child: const Image(
                     image: AssetImage('assets/timeoff.png'),
                   ),
 
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 // Image.asset('assets/timeoff.png'),
                 Card(
                   elevation: 5,
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(15))),
                   shadowColor: kwhite,
                   color: kwhite,
@@ -57,10 +57,10 @@ class CodeVerification extends StatelessWidget {
                     // decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(50))),
                     child: Column(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
-                        Text(
+                        const Text(
                           'We have sent an OTP code to either your \n   email ,input the code to recover your \n                       password.',
                           style: TextStyle(
                               fontWeight: FontWeight.w500,
@@ -69,7 +69,7 @@ class CodeVerification extends StatelessWidget {
                         ),
                         FormInputField("OTP", emailController, validateEmail),
 
-                        SizedBox(
+                        const SizedBox(
                           height: 30,
                         ),
                         ButtonComponent(
